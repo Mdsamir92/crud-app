@@ -53,7 +53,7 @@ function Read() {
     </div>
 
       <div className='d-flex justify-content-between  mx-3'>
-     <h2>Read Operation</h2>
+     <h4>Read Data</h4>
      <div className='mb-3' >
       <input type="search" placeholder="Search here..." className='form-control' onChange={inputHandler} />
       {/* <SearchIcon  className='searchIcon' sx={{color:"black",cursor:"pointer",position:"absolute",top:"70px",left:"62%"}}/> */}
