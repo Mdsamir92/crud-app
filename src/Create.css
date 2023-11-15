@@ -1,4 +1,6 @@
-
+body{
+    background-color:pink;
+}
 .form-container{
     background: rgba(62, 155, 158, 0.10);
     box-shadow:-10px  10px  10px  5px grey;
