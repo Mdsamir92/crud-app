@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import "./Create.css"
 
 function Create() {
 
@@ -37,7 +37,7 @@ function Create() {
         </Link>
       </div>
 
-      <div style={{ margin: "80px", padding: "40px", width: "60%", marginTop: "80px", marginLeft: "20px", boxShadow: "-10px  10px  10px  5px grey", display: "grid", placeItems: "center" }}>
+       <div className='form-container'>
         <form >
           <div className="mb-3">
             <label className="form-label">Name</label>
