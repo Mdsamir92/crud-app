@@ -17,7 +17,14 @@ transform: translate(-50%, -50%);
 
 }
 label{
-  font-family:500;
+  font-weight: 500;
+}
+input[type="checkbox"]{
+  cursor: pointer;
+ 
+}
+button{
+  width: 150px;
 }
 
 
