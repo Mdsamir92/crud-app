@@ -35,7 +35,7 @@ function Update() {
   return (
     <div>
     <h2>Update</h2>
-    <div style={{ margin: "80px", padding: "40px", width: "60%", marginTop: "80px",marginLeft:"20px", boxShadow: "-10px  10px  10px  5px grey", display: "grid", placeItems: "center" }}> 
+<div className='form-container'> 
 <form>
 <div className="mb-3">
     <label className="form-label">Name</label>
