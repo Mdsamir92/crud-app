@@ -41,15 +41,15 @@ function Create() {
         <form >
           <div className="mb-3">
             <label className="form-label">Name</label>
-            <input type="text" className="form-control" required onChange={(e) => setName(e.target.value)} />
+            <input type="text" className="form-control" required placeholder='Enter name...' onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="mb-3">
             <label className="form-label"  >Email address</label>
-            <input type="email" className="form-control" required onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" className="form-control" required placeholder='Enter email...' onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="mb-3" >
-            <label className="form-label">Phone number</label>
-            <input type="number" className="form-control" required onChange={(e) => setPhone(e.target.value)} />
+            <label className="form-label">Phone </label>
+            <input type="number" className="form-control" required placeholder='Enter number...' onChange={(e) => setPhone(e.target.value)} />
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" />
