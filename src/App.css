@@ -16,7 +16,10 @@ left: 50%;
 transform: translate(-50%, -50%);
 
 }
+th{
 
+  font-family:500;
+}
 
 
 @media(max-width:768px) {
@@ -36,6 +39,7 @@ tbody{
 th{
   font-size: 15px;
   padding: 0px 5px;
+  font-family:500;
 }
 
 }
