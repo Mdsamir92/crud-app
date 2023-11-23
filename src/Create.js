@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import Swal from "sweetalert2"
 
 function Create() {
 
@@ -12,9 +12,30 @@ function Create() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-
+// const Swal = require('sweetalert2')
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if(name.length ==""){
+    
+      // Swal.fire({
+      //   icon:"error",
+      //   title:"Oops..",
+      //   text:"please enter name!.."
+      // });
+      Swal.fire({title:"Oops",text:"please enter name..."})
+     return;
+    }  if(email.length ==""){
+   Swal.fire("please enter email...")
+     return;
+    } if(phone.length ==""){
+      Swal.fire("please enter number...")
+     return;
+    }
+    else{
+      alert("submit successfully")
+      navigate("/read");
+    }
     axios.post(
       'https://632c652f5568d3cad884c4bc.mockapi.io/Crud-Youtube',
       {
@@ -23,8 +44,10 @@ function Create() {
         phone: phone,
       }
     ).then(() => {
-      navigate("/read");
+
     });
+
+
   }
 
   return (
@@ -37,19 +60,20 @@ function Create() {
         </Link>
       </div>
 
+      {/* <div className='form-container' style={{ margin: "80px", padding: "40px", width: "60%", marginTop: "80px", marginLeft: "20px", boxShadow: "-10px  10px  10px  5px grey", display: "grid", placeItems: "center" }}> */}
        <div className='form-container'>
         <form >
           <div className="mb-3">
             <label className="form-label">Name</label>
-            <input type="text" className="form-control" required placeholder='Enter name...' onChange={(e) => setName(e.target.value)} />
+            <input type="name" className="form-control" placeholder='Enter name...' onChange={(e) => setName(e.target.value)}  required/> 
           </div>
           <div className="mb-3">
             <label className="form-label"  >Email address</label>
-            <input type="email" className="form-control" required placeholder='Enter email...' onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" className="form-control" placeholder='Enter email...' onChange={(e) => setEmail(e.target.value)} required  />
           </div>
           <div className="mb-3" >
             <label className="form-label">Phone </label>
-            <input type="number" className="form-control" required placeholder='Enter number...' onChange={(e) => setPhone(e.target.value)} />
+            <input type="number" className="form-control" placeholder='Enter number...' onChange={(e) => setPhone(e.target.value)} required  />
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" />
@@ -57,9 +81,8 @@ function Create() {
           </div>
           <button type="submit" className="btn btn-warning" onClick={handleSubmit}>Submit</button>
         </form>
+       
       </div>
-
-
     </div>
   )
 }
