@@ -28,7 +28,7 @@ const Swal = require('sweetalert2')
     }
     else{
      Swal.fire({title:"Wow",text:"submit successfully 😍..."})
-    navigate("/read");
+
     }
     
     axios.post(
@@ -39,7 +39,7 @@ const Swal = require('sweetalert2')
         phone: phone,
       }
     ).then(() => {
-
+    navigate("/read");
     });
 
 
