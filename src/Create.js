@@ -17,19 +17,20 @@ const Swal = require('sweetalert2')
     e.preventDefault();
 
     if(name.length ==""){
-      Swal.fire({title:"Oops",text:"please enter name..."})
+      Swal.fire({title:"Oops",text:"please enter name...😕"})
      return;
     }  if(email.length ==""){
-      Swal.fire({title:"Oops",text:"please enter email..."})
+      Swal.fire({title:"Oops",text:"please enter email...😕"})
      return;
     } if(phone.length ==""){
-      Swal.fire({title:"Oops",text:"please enter number..."})
+      Swal.fire({title:"Oops",text:"please enter number...😕"})
      return;
     }
     else{
-      alert("submit successfully")
-      navigate("/read");
+     Swal.fire({title:"Wow",text:"submit successfully 😍..."})
+    navigate("/read");
     }
+    
     axios.post(
       'https://632c652f5568d3cad884c4bc.mockapi.io/Crud-Youtube',
       {
