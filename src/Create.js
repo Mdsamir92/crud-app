@@ -21,10 +21,10 @@ function Create() {
         name: name,
         email: email,
         phone: phone,
-      }.then(() => {
+      }
+    ).then(() => {
       navigate("/read");
     });
-    )
   }
 
   return (
