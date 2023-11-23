@@ -12,7 +12,7 @@ function Create() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-// const Swal = require('sweetalert2')
+const Swal = require('sweetalert2')
   const handleSubmit = (e) => {
     e.preventDefault();
 
