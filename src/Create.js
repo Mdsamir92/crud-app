@@ -17,12 +17,6 @@ function Create() {
     e.preventDefault();
 
     if(name.length ==""){
-    
-      // Swal.fire({
-      //   icon:"error",
-      //   title:"Oops..",
-      //   text:"please enter name!.."
-      // });
       Swal.fire({title:"Oops",text:"please enter name..."})
      return;
     }  if(email.length ==""){
