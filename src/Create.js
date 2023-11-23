@@ -20,10 +20,10 @@ function Create() {
       Swal.fire({title:"Oops",text:"please enter name..."})
      return;
     }  if(email.length ==""){
-   Swal.fire("please enter email...")
+      Swal.fire({title:"Oops",text:"please enter email..."})
      return;
     } if(phone.length ==""){
-      Swal.fire("please enter number...")
+      Swal.fire({title:"Oops",text:"please enter number..."})
      return;
     }
     else{
