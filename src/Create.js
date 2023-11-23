@@ -21,7 +21,9 @@ function Create() {
         name: name,
         email: email,
         phone: phone,
-      }
+      }.then(() => {
+      navigate("/read");
+    });
     )
   }
 
