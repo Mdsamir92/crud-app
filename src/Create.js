@@ -22,9 +22,7 @@ function Create() {
         email: email,
         phone: phone,
       }
-    ).then(() => {
-      navigate("/read");
-    });
+    )
   }
 
   return (
